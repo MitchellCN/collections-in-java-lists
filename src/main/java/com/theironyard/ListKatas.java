@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -11,9 +13,9 @@ public class ListKatas {
      * argument, n. The method should return a new ArrayList of Integers
      * containing `n` elements, each set to their index in the list. For
      * example, if n were 5 you would create this ArrayList:
-     *
+     * <p>
      * [0, 1, 2, 3, 4]
-     *
+     * <p>
      * Note: Remember that ArrayLists can only hold objects. That means you must
      * make an ArrayList of Integer objects. However, Java will autobox int
      * values so you can put int primitives into a List of Integer objects.
@@ -22,6 +24,17 @@ public class ListKatas {
      * @return An ArrayList of Integers, starting at 0 and continuing to n-1
      */
     // todo: create arrayListIndexes() method
+    public static ArrayList<Integer> arrayListIndexes(int n) {
+
+        ArrayList<Integer> sheet = new ArrayList<>();
+        for (int list = 0; list < n; list++) {
+            sheet.add(list);
+        }
+        return sheet;
+
+
+    }
+
 
     /**
      * Write a static method named sumList() that accepts an ArrayList of
@@ -33,6 +46,17 @@ public class ListKatas {
      * @return the sum of the provided List of Doubles
      */
     // todo: create sumList() method
+    public static double sumList(ArrayList<Double> numbers) {
+        double dubs = 0;
+
+        for (int i = 0; i < numbers.size(); i++) {
+            dubs = dubs + numbers.get(i);
+        }
+        return dubs;
+
+        //ArrayList<Double>acct = new ArrayList<>();
+
+    }
 
     /**
      * Create a static method named concatenateStrings() that accepts an
@@ -44,23 +68,33 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+    public static String concatenateStrings(ArrayList<String> strings) {
+
+        String str = "";
+
+        for (int i = 0; i < strings.size(); i++) {
+            str = str + strings.get(i);
+
+        }
+        return str;
+    }
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
      * ArrayList of Strings. The method should return a new ArrayList containing
      * the same String values in the reverse order. For example:
-     *
+     * <p>
      * input:
-     *
+     * <p>
      * ["This", "is", "a", "list"]
-     *
+     * <p>
      * reversed:
-     *
+     * <p>
      * ["list", "a", "is", "This"]
-     *
+     * <p>
      * Because the input and result can contain only contain Strings, make sure
      * you are specifying the correct generics.
-     *
+     * <p>
      * Note: This exercises assumes you will create and populate a new ArrayList
      * of Strings with the reverse of the values in the `strings` argument.
      *
@@ -68,5 +102,15 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+    public static ArrayList<String> reverseListOfStrings(ArrayList<String> strings) {
+       ArrayList<String> paper = new ArrayList<>();
 
+       for(int x = strings.size() - 1; 0 <= x ; x--){
+       paper.add(strings.get(x));
+
+
+        }
+        return paper;
+
+    }
 }
